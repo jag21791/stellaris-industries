@@ -13,7 +13,7 @@
 body { 
   display: grid;
   grid-template-areas: 
-    "nav header ads"
+    " header ads"
     "nav article article"
     "nav footer footer";
   grid-template-rows: 80px 1fr 70px;  
@@ -28,29 +28,29 @@ header, footer, article, nav, div {
   background: green;
   }
 #pageHeader {
-  grid-area: Welcome! This is the Stellaris Industries website in-progress;
+  grid-area: header;
   }
 #pageFooter {
-  grid-area: wow! such ugly;
+  grid-area: footer;
   }
 #mainArticle { 
-  grid-area: I know what you're thinking...;      
+  grid-area: article;      
   }
 #mainNav { 
-  grid-area: (read left to right); 
+  grid-area: nav; 
   }
 #siteAds { 
-  grid-area: we know; 
+  grid-area: ads; 
   } 
 /* Stack the layout on small devices/viewports. */
 @media all and (max-width: 575px) {
   body { 
     grid-template-areas: 
-      "header"
-      "article"
-      "ads"
-      "nav"
-      "footer";
+      <!-- "header" --> "Welcome! This is the Stellaris Industries website in-progress"
+      <!-- "article" --> "I know what you're thinking..."
+      <!-- "ads" --> " ... "
+      <!-- "nav" --> " ... "
+      <!-- "footer" --> "Hoot crap this is ugly";
     grid-template-rows: 80px 1fr 70px 1fr 70px;  
     grid-template-columns: 1fr;
  }
